@@ -110,7 +110,7 @@
         }
     </style>
 </head>
-<body class="overflow-hidden">
+<body class="bg-slate-900 min-h-screen">
     <div id="root"></div>
 
     <script type="text/babel">
@@ -407,7 +407,7 @@
             const observes = polarity === 1 ? activeDesc.observeNormal : activeDesc.observeReverse;
 
             return (
-                <div className="h-screen flex flex-col md:flex-row bg-[#0f172a]">
+                <div className="min-h-screen flex flex-col md:flex-row bg-[#0f172a]">
                     
                     {/* Sidebar */}
                     <aside className="w-full md:w-72 glass-panel border-r border-slate-700/50 flex flex-col z-20 flex-shrink-0 shadow-2xl">
@@ -442,7 +442,7 @@
                     </aside>
 
                     {/* Main Workspace */}
-                    <main className="flex-1 flex flex-col h-screen overflow-hidden relative">
+                    <main className="flex-1 flex flex-col relative min-w-0 md:h-screen md:overflow-hidden">
                         
                         {/* Top Navbar Area */}
                         <header className="px-6 py-4 glass-panel border-b border-slate-700/50 z-10 flex justify-between items-center bg-slate-900/80">
@@ -458,7 +458,7 @@
                         </header>
 
                         {/* Content Splitter */}
-                        <div className={`flex-1 p-4 md:p-6 flex flex-col ${showDesc ? 'xl:flex-row' : 'xl:flex-col'} gap-6 overflow-hidden`}>
+                        <div className={`flex-1 p-4 md:p-6 flex flex-col ${showDesc ? 'xl:flex-row' : 'xl:flex-col'} gap-6 overflow-y-auto`}>
                             
                             {/* SVG Canvas Area */}
                             <div className="flex-1 flex flex-col glass-panel rounded-2xl shadow-2xl border border-slate-700/50 overflow-hidden min-h-[400px]">
